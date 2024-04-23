@@ -59,7 +59,7 @@ endfunction()
 add_subdirectory(RecCalorimeter)
 add_subdirectory(RecFCChhCalorimeter)
 add_subdirectory(RecFCCeeCalorimeter)
-
+add_subdirectory(RecODDCalorimeter)
 
 
 
