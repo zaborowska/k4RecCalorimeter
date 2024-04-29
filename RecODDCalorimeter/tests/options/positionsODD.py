@@ -15,7 +15,7 @@ geoservice = GeoSvc("GeoSvc")
 # if FCC_DETECTORS is empty, this should use relative path to working directory
 path_to_detectors = os.environ.get("FCCcore", "")
 detectors = [
-        'OpenDataDetector/xml/OpenDataDetector2.xml'
+        'OpenDataDetector/xml/OpenDataDetector.xml'
 ]
 # prefix all xmls with path_to_detectors
 for det in detectors:
