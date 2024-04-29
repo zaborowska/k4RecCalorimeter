@@ -35,7 +35,6 @@ for entry in myTree:
         errorboxes_zyCylindr.append(Polygon((
                 (z+0.5*dz,ymax), (z-0.5*dz,ymax), (z-0.5*dz,ymin), (z+0.5*dz,ymin)
                                             )))
-pc_zyCart = PatchCollection(errorboxes_zyCart, facecolor='b', alpha=0.2, edgecolor='black')
 pc_zyCylindr = PatchCollection(errorboxes_zyCylindr, facecolor='r', alpha=0.1, edgecolor='r')
 ax1.scatter([ev.r*cos(ev.phi) for ev in myTree], [ev.r*sin(ev.phi) for ev in myTree],color='r', marker='+')
 ax2.add_collection(pc_zyCylindr)

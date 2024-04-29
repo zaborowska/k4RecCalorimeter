@@ -22,7 +22,6 @@ errorboxes_xyCylindr = []
 errorboxes_xyAC = []
 for x, y, xa, ya, xc, yc in zip(df.x, df.y, df.xA, df.yA, df.xC, df.yC):
         errorboxes_xyCart.append(Polygon(((x-xc+xa,y-yc+ya),(x+xa+xc,y+ya+yc), (x+xc-xa,y+yc-ya), (x-xa-xc,y-ya-yc))))
-        errorboxes_yxCart.append(Polygon(((y-yc+ya,x-xc+xa),(y+ya+yc,x+xa+xc), (y+yc-ya,x+xc-xa), (y-ya-yc,x-xa-xc))))
 for event in myTree:
         r, phi, dr, dphi = event.r, event.phi, event.dr, event.dphi
         errorboxes_xyCylindr.append(Polygon((
