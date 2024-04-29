@@ -24,16 +24,16 @@ geoservice.OutputLevel = WARNING
 
 from Configurables import CreateODDCells
 cells = CreateODDCells("cellsODD",
-                       outputFileName="ODD_cells_barrel.root",
-                       readoutNames=["ECalBarrelCollection"],#,"ECalEndcapCollection"],
-                       topVolumeNames=["ECalBarrel"],#,"ECalEndcap"],
-                       topVolumeIdentifiers=[16],#,273],#,529],
-                       activeVolumeNames=["stave_inner:layer:slice4"],#,"slice4"],
-                       isBarrel=[True],
-                       isCylindrical=[False],
-                       isECCylindrical=[True],
-                       isCartesian=[False],
-                       OutputLevel=INFO)
+                       outputFileName="ODD_cells.root",
+                       readoutNames=["ECalBarrelCollection", "ECalEndcapCollection", "ECalEndcapCollection"],
+                       topVolumeNames=["ECalBarrel", "ECalEndcap_endcap_0", "ECalEndcap_endcap_1"],
+                       topVolumeIdentifiers=[16,273,529],
+                       activeVolumeNames=["stave_inner:layer:slice4", "stave_inner:layer:slice4", "stave_inner:layer:slice4"],
+                       isBarrel=[True, False, False],
+                       isCylindrical=[False, False, False],
+                       isECCylindrical=[True, True, True],
+                       isCartesian=[False, False, False],
+                       OutputLevel=DEBUG)
 
 ApplicationMgr(
 TopAlg = [     ],

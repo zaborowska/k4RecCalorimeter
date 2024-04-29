@@ -7,6 +7,7 @@
 
 #include "TGeoManager.h"
 #include "DDSegmentation/CartesianGridXY.h"
+#include "DDSegmentation/CartesianGridXZ.h"
 
 class IGeoSvc;
 
@@ -56,7 +57,9 @@ private:
   std::string m_outputFileName;
 };
 
+std::array<double,5> trapezoidDimensions(uint64_t aVolumeId);
 std::array<uint, 2> numberOfCells(uint64_t aVolumeId, const dd4hep::DDSegmentation::CartesianGridXY& aSeg);
+std::vector<uint> numberOfCells(uint64_t aVolumeId, const dd4hep::DDSegmentation::CartesianGridXZ& aSeg);
 unsigned int countPlacedVolumes(TGeoVolume* aHighestVolume, const std::string& aMatchName);
 TGeoVolume* findVolume(TGeoVolume* aHighestVolume, const std::string& aTopVolName);
 
