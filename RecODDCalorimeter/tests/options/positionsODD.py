@@ -27,13 +27,13 @@ cells = CreateODDCells("cellsODD",
                        outputFileName="ODD_cells.root",
                        readoutNames=["ECalBarrelCollection", "ECalEndcapCollection", "ECalEndcapCollection"],
                        topVolumeNames=["ECalBarrel", "ECalEndcap_endcap_0", "ECalEndcap_endcap_1"],
-                       topVolumeIdentifiers=[16,273,529],
+                       topVolumeIdentifiers=[16,273,529], # 16<<0, (17<<0)+(1<<8), (17<<0)+(2<<8)
                        activeVolumeNames=["stave_inner:layer:slice4", "stave_inner:layer:slice4", "stave_inner:layer:slice4"],
                        isBarrel=[True, False, False],
                        isCylindrical=[False, False, False],
                        isECCylindrical=[True, True, True],
                        isCartesian=[False, False, False],
-                       OutputLevel=DEBUG)
+                       OutputLevel=INFO)
 
 ApplicationMgr(
 TopAlg = [     ],

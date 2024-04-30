@@ -229,6 +229,7 @@ StatusCode CreateODDCells::initialize() {
       myfile.open(m_topVolumeNames[iSys]+"_cellPositions.txt");
       myfile << "cellId, x, y, z, phi, R, dphi, dR, dz, xA, yA, zA, xB, yB, zB, xC, yC, zC, xD, yD, zD, dx, dy" << std::endl;
     }
+    std::cout << decoder->valueString(m_topVolumeIdentifiers[iSys]) << std:: endl;
     for (unsigned int imodule = 0; imodule < numVolumes[1]; imodule++) {
       for (unsigned int ilayer = 0; ilayer < numVolumes[numVolumes.size() - 2]; ilayer++) {
         layer = ilayer;
